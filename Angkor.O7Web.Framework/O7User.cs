@@ -1,6 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Angkor.O7Framework.ServiceClient.SecurityClient;
 using System.Security.Principal;
-using Angkor.O7Framework.ServiceClient.SecurityClient;
 
 namespace Angkor.O7Framework.Web
 {
