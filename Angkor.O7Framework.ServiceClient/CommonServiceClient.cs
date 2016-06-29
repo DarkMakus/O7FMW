@@ -4,9 +4,6 @@ namespace Angkor.O7Framework.ServiceClient
 {
     public class CommonServiceClient
     {
-        public static SecurityContract GetSecurityContract()
-        {
-            return new SecurityContractClient();
-        }
+        public static SecurityContract GetSecurityContract() => new SecurityContractClient();
     }
 }

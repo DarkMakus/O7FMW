@@ -20,6 +20,7 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Angkor.O7Common.Entities" minOccurs="0" name="company" nillable="true" type="q2:Company" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Angkor.O7Common.Entities" minOccurs="0" name="branch" nillable="true" type="q3:Branch" />
         <xs:element minOccurs="0" name="nickname" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
@@ -27,7 +28,7 @@
   <xs:element name="FindWorkerResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Angkor.O7Common.Entities" minOccurs="0" name="FindWorkerResult" nillable="true" type="q3:Worker" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Angkor.O7Common.Entities" minOccurs="0" name="FindWorkerResult" nillable="true" type="q4:Worker" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

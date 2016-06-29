@@ -8,10 +8,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Angkor.O7Framework.ServiceClient.SecurityClient
-{
-
-
+namespace Angkor.O7Framework.ServiceClient.SecurityClient {
+    using System.Runtime.Serialization;
+    using System;
+    
+    
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Company", Namespace="http://schemas.datacontract.org/2004/07/Angkor.O7Common.Entities")]
@@ -163,9 +164,6 @@ namespace Angkor.O7Framework.ServiceClient.SecurityClient
         private string ActiveField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Collections.Generic.List<Angkor.O7Framework.ServiceClient.SecurityClient.Company> CompaniesField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string IdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -190,19 +188,6 @@ namespace Angkor.O7Framework.ServiceClient.SecurityClient
                 if ((object.ReferenceEquals(this.ActiveField, value) != true)) {
                     this.ActiveField = value;
                     this.RaisePropertyChanged("Active");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.Generic.List<Angkor.O7Framework.ServiceClient.SecurityClient.Company> Companies {
-            get {
-                return this.CompaniesField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CompaniesField, value) != true)) {
-                    this.CompaniesField = value;
-                    this.RaisePropertyChanged("Companies");
                 }
             }
         }
@@ -251,7 +236,7 @@ namespace Angkor.O7Framework.ServiceClient.SecurityClient
         System.Collections.Generic.List<Angkor.O7Framework.ServiceClient.SecurityClient.Company> FindCredentials(string nickname, string password);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SecurityContract/FindWorker", ReplyAction="http://tempuri.org/SecurityContract/FindWorkerResponse")]
-        Angkor.O7Framework.ServiceClient.SecurityClient.Worker FindWorker(Angkor.O7Framework.ServiceClient.SecurityClient.Company company, string nickname);
+        Angkor.O7Framework.ServiceClient.SecurityClient.Worker FindWorker(Angkor.O7Framework.ServiceClient.SecurityClient.Company company, Angkor.O7Framework.ServiceClient.SecurityClient.Branch branch, string nickname);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -285,8 +270,8 @@ namespace Angkor.O7Framework.ServiceClient.SecurityClient
             return base.Channel.FindCredentials(nickname, password);
         }
         
-        public Angkor.O7Framework.ServiceClient.SecurityClient.Worker FindWorker(Angkor.O7Framework.ServiceClient.SecurityClient.Company company, string nickname) {
-            return base.Channel.FindWorker(company, nickname);
+        public Angkor.O7Framework.ServiceClient.SecurityClient.Worker FindWorker(Angkor.O7Framework.ServiceClient.SecurityClient.Company company, Angkor.O7Framework.ServiceClient.SecurityClient.Branch branch, string nickname) {
+            return base.Channel.FindWorker(company, branch, nickname);
         }
     }
 }

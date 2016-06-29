@@ -30,7 +30,6 @@
   <xs:complexType name="Worker">
     <xs:sequence>
       <xs:element minOccurs="0" name="Active" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Companies" nillable="true" type="tns:ArrayOfCompany" />
       <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
     </xs:sequence>
